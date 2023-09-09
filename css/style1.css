@@ -135,7 +135,7 @@
     untuk pengguna vscode silahkan arahkan mouse ke kotak warna di bawah
     untuk mengganti warna sesuai keinginan
     */
-    background-color: #0b4e5f;
+    background-color: #0b4e5fc7;
  
     /* box-shadow membuat efek bayangan */
     box-shadow: 0 3px 7px -2px #000;
@@ -180,6 +180,11 @@
     padding-right: 8px;
  }
  
+ nav a:hover {
+   color: #0b4e5f;
+   
+}
+
  a.shop {
     margin-right: 100px;
  }
@@ -194,7 +199,11 @@
     padding-left: 15px;
     border-radius: 10px;
  }
- 
+
+ a.chat:hover {
+   background-color: #fff;
+   color: rgb(8, 42, 69);
+}
  
  /* 
     PERHATIKAN bahwa dalam mengatur elemen, nama elemen langsung ditulis
