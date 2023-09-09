@@ -1,0 +1,71 @@
+{
+    "arabica": [
+        {
+            "foto": "https://s2.bukalapak.com/img/7337552332/large/KOPI_ARABICA_GAYO_WINE_SINGLE_ORIGIN.jpg",
+            "nama": "KOPI ARABICA GAYO WINE SINGLE ORIGIN",
+            "size": "500 Gram",
+            "harga": "70.000",
+            "link": "https://www.bukalapak.com/p/food/minuman/aorrqs-jual-kopi-arabica-gayo-wine-single-origin"
+        },
+        {
+            "foto": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRUpPWxVmWiyBeOM4_1ZdraaNVkGOsZX80LUTHFpLuqRBSm3NufYTtS2xMBzM87g-OJHbtOvnVLfDO8nuBh2iskWY1UEpRs&usqp=CAE",
+            "nama": "Kopi Arabika Ciwidey Natural Biji Bubuk",
+            "size": "1000 Gram",
+            "harga": "248.000",
+            "link": "https://www.blibli.com/p/kopi-arabika-ciwidey-natural-1000g-biji-bubuk/is--IRB-70017-00135-00001?pickupPointCode=PP-3454658"
+        },
+        {
+            "foto": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQUHLAaCqgQml8taSiQ0xi_05r3zWt0mf8B0N8tBCTu40NZjMMVEwWpqekeaXf2Bbqt1tjHhl8nCKKIHAtnYEOB3zCuxFNu9YwncMO3GlLTGsBJz9-DqT-uzA&usqp=CAE",
+            "nama": "Kopi Arabika Papua",
+            "size": "1000 Gram",
+            "harga": "205.000",
+            "link": "https://www.bukalapak.com/p/food/minuman/1flhtqt-jual-kopi-arabika-papua-1000gram"
+        }
+    ],
+    "robusta": [
+        {
+            "foto": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR7G9vDu_EjdRj3js1SyFr1jZVWnXh2Fhgx333v27tk5eLBvzJ7QkBjln388WqLDoPIdyB94ncGS-RX5mzax5YFJiU2vymoCysh-o0n0qyu&usqp=CAE",
+            "nama": "Kopi Robusta Klasik",
+            "size": "100 Gram",
+            "harga": "15.000",
+            "link": "https://shopee.co.id/product/1005037598/18082775866"
+        },
+        {
+            "foto": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS1MJPapss-jLLzjhky6YQ14wzY6s9JLMsAKp1ZC8Qx5XKhIVeTwK56vU2hV6lRbfLoDp2pr3_5Tn1U7TZj3sj5qVFQOKxls8hnM-25pM0RM6WXsTxkPsFa&usqp=CAE",
+            "nama": "Kopi Robusta Temanggung",
+            "size": "500 Gram",
+            "harga": "148.000",
+            "link": "https://ottencoffee.co.id/coffee-beans/kopi-robusta-temanggung-500g"
+        },
+        {
+            "foto": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSKJmulCLO98B6RExbquQJ75iNqWHhZRWhrO5BcXgT5x3PbXwFyOhfI5qPVpHYyz4dLxgKBWBiJ_LhI7cTq9uRVza8uegxe88TVI33_kR01&usqp=CAE",
+            "nama": "Sumatera Robusta (Kopi Robusta)",
+            "size": "200 Gram",
+            "harga": "25.000",
+            "link": "https://deltacoffee.co.id/product/sumatera-robusta/#reviews"
+        }
+    ],
+    "nonkopi": [
+        {
+            "foto": "https://blog.tokowahab.com/wp-content/uploads/2021/04/Resep-Es-Campur-Bangka-di-Blog.Tokowahab.coom_.jpg",
+            "nama": "Es Campur",
+            "size": "1 Mangkok",
+            "harga": "15.000",
+            "link": "https://www.google.com/search?q=es+campur&sca_esv=563362597&tbm=isch&sxsrf=AB5stBjiqN2lgY9_yU6d9zp8LSbHk__8YQ:1694085569616&source=lnms&sa=X&ved=0ahUKEwjzwuHEsJiBAxUP1TgGHcDBCigQ0pQJCNEG&biw=705&bih=636&dpr=1#imgrc=84_DXYct3VZrqM"
+        },
+        {
+            "foto": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2ygtAfpb2ca7ZA0PvDh5s39VSmxVSJ9bFyktNyHLl3BhUzRXf8hcAqJ5l0dV-58WZErk53JMvGhyKjpbmwiouxHRXF9d614IKzOK4uvo&usqp=CAE",
+            "nama": "Milkshake Vanilla",
+            "size": "Medium",
+            "harga": "20.000",
+            "link": "https://www.google.com/search?q=milkshake&source=lmns&tbm=shop&bih=636&biw=705&hl=id&sa=X&ved=2ahUKEwjG4LSdsZiBAxVX3DgGHbFeCz4Q0pQJKAJ6BAgBEAY#spd=3317988779654172408"
+        },
+        {
+            "foto": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRdL4riyTRRjT7F_GIMoByO8BWNwzbL5vsCmpNDs3CvsFKq-zVJH4ZG5st7XpFkpKFDy-2H1x3ml1HYh83d8ABFNBDCSjZPsw&usqp=CAE",
+            "nama": "Teh Tarik",
+            "size": "Medium",
+            "harga": "18.000",
+            "link": "https://www.google.com/search?q=teh+tarik&sa=X&sca_esv=563362597&bih=636&biw=705&hl=id&tbm=shop&sxsrf=AB5stBha9MPu1-zGvUMflSu2bAOlmTgyzA%3A1694085873636&ei=8bL5ZMzcJerjseMP9sCImAI&ved=0ahUKEwiMmd3VsZiBAxXqcWwGHXYgAiMQ4dUDCAc&uact=5&oq=teh+tarik&gs_lp=Egtwcm9kdWN0cy1jYyIJdGVoIHRhcmlrMgsQABiABBixAxiDATILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEiyDlAAWJkMcAB4AJABAJgBSqAB9QOqAQE5uAEDyAEA-AEBwgIHEAAYigUYQ8ICBBAAGAOIBgE&sclient=products-cc#spd=12739212830247185963"
+        }
+    ]
+}
