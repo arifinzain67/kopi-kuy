@@ -62,6 +62,8 @@
     kenapa pada body? karena elemen body membungkus semua elemen dari nav section sampai footer
     */
     font-family: 'Poppins';
+    background-image: url(../images/background/bgkopi.png);
+    background-color: #0b5769;
  }
  
  /*
@@ -178,10 +180,11 @@
     color: #fff;
     padding-left: 8px;
     padding-right: 8px;
+    font-family: Bauhaus 93;    
  }
  
  nav a:hover {
-   color: #0b4e5f;
+   color: #06beec;
    
 }
 
@@ -240,12 +243,16 @@
  
  header h1 {
     margin-bottom: 20px;
+    color: #ffffff;
+    font-family: Cooper;
  }
  
  header p {
     /* font-size digunakan untuk mengatur ukuran huruf */
     font-size: 18px;
     margin-bottom: 20px;
+    color: #fff;
+    font-family: Bell MT;
  }
  
  div.olshop img {
@@ -272,21 +279,28 @@
  terkait layout pada CSS untuk dapat memahami secara penuh 
  */
  
+ section.best-seller {
+   background-color: #0b4e5f;
+ }
+
  section.best-seller::before,
  section.best-seller::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 76px;
+   
  
     /* background-image untuk menambahkan gambar sebagai background */
     background-image: url(../images/background/garis-atas.png);
+    
  
     /*background-size agar gambar latar menyesuaikan tinggi / lebar elemen */
     background-size: cover;
- 
+
     top: -60px;
     left: 0;
+    
  }
  
  section.best-seller::after {
@@ -299,6 +313,7 @@
  section.best-seller h2 {
     margin-bottom: 20px;
     width: 100%;
+    font-family: Cooper;
  }
  
  /* 
@@ -311,6 +326,7 @@
     font-size: 18px;
     margin-bottom: 40px;
     width: 100%;
+    font-family: Bell MT;
  }
  
  div.produk {
@@ -370,6 +386,7 @@
  section.about-us h2 {
     margin-bottom: 30px;
     width: 100%;
+    font-family: Cooper;
  }
  
  section.about-us img {
@@ -399,7 +416,7 @@
  /* OUR TEAM */
  
  section.our-team {
-    background-color: #EEE6DC;
+    background-color: #0b4e5f;
     box-shadow: inset 0px 0px 23px -6px #707070;
     text-align: center;
  }
@@ -407,6 +424,7 @@
  section.our-team h2 {
     margin-bottom: 20px;
     width: 100%;
+    font-family: Cooper;
  }
  
  section.our-team>p {
@@ -417,6 +435,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    font-family: Bell MT;
  }
  
  div.team {
@@ -431,6 +450,12 @@
     box-shadow: 0 3px 10px -2px #000;
     border-radius: 50px 0px 50px 0px;
     margin-bottom: 10px;
+ }
+ div.team h3 {
+   font-family: Forte;
+ }
+ div.team p {
+   font-family: Bahnschrift;
  }
  
  
@@ -459,12 +484,14 @@
  section.review h2 {
     margin-bottom: 20px;
     width: 100%;
+    font-family: Cooper;
  }
  
  section.review>p {
     margin-bottom: 40px;
     font-size: 18px;
     width: 100%;
+    font-family: Bell MT;
  }
  
  div.testimoni {
@@ -473,8 +500,13 @@
     flex-wrap: wrap;
     padding: 35px 50px;
     box-shadow: 0px 0px 12px -10px #000;
-    background-color: #fff;
+    background-color: #0b5769;
+    transition: all 0.3s ease;
  }
+
+ div.testimoni:hover, div.team:hover {
+  transform: scale(1.2);
+}
  
  div.testimoni img {
     width: 60px;
@@ -486,18 +518,26 @@
  div.profile {
     text-align: left;
     display: block;
-    margin-bottom: 30px;
     width: calc(100% - 75px);
+ }
+ 
+ div.profile h3 {
+   font-family: Forte;
+   color: #fff;
  }
  
  div.profile p {
     width: 100%;
     text-align: left;
+    font-family: Bahnschrift;
+    color: #fff;
  }
  
  div.testimoni>p {
     width: 100%;
     text-align: left;
+    margin-top: 30px;
+    color: #fff;
  }
  
  
@@ -515,9 +555,10 @@
  div.kontak {
     width: 30%;
     /* color mengatur warna tulisan */
-    color: #0b4e5f;
+    color: #ffffff;
     text-align: center;
     margin-top: 50px;
+    font-family: Bell MT;
  }
  
  
@@ -539,7 +580,12 @@
  
  footer div.navigasi a {
     padding: 8px;
+    font-family: Bauhaus 93;
  }
+
+ footer div.navigasi a:hover {
+   color: #06beec;
+}
  
  /* UNTUK kode RESPONSIF hari ke 3 tulis DI BAWAH sini */
  

@@ -45,6 +45,15 @@
             "link": "https://deltacoffee.co.id/product/sumatera-robusta/#reviews"
         }
     ],
+    "milkshake": [
+        {
+            "foto": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2ygtAfpb2ca7ZA0PvDh5s39VSmxVSJ9bFyktNyHLl3BhUzRXf8hcAqJ5l0dV-58WZErk53JMvGhyKjpbmwiouxHRXF9d614IKzOK4uvo&usqp=CAE",
+            "nama": "Milkshake Vanilla",
+            "size": "Medium",
+            "harga": "20.000",
+            "link": "https://www.google.com/search?q=milkshake&source=lmns&tbm=shop&bih=636&biw=705&hl=id&sa=X&ved=2ahUKEwjG4LSdsZiBAxVX3DgGHbFeCz4Q0pQJKAJ6BAgBEAY#spd=3317988779654172408"
+        }
+    ],
     "nonkopi": [
         {
             "foto": "https://blog.tokowahab.com/wp-content/uploads/2021/04/Resep-Es-Campur-Bangka-di-Blog.Tokowahab.coom_.jpg",
@@ -52,13 +61,6 @@
             "size": "1 Mangkok",
             "harga": "15.000",
             "link": "https://www.google.com/search?q=es+campur&sca_esv=563362597&tbm=isch&sxsrf=AB5stBjiqN2lgY9_yU6d9zp8LSbHk__8YQ:1694085569616&source=lnms&sa=X&ved=0ahUKEwjzwuHEsJiBAxUP1TgGHcDBCigQ0pQJCNEG&biw=705&bih=636&dpr=1#imgrc=84_DXYct3VZrqM"
-        },
-        {
-            "foto": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR2ygtAfpb2ca7ZA0PvDh5s39VSmxVSJ9bFyktNyHLl3BhUzRXf8hcAqJ5l0dV-58WZErk53JMvGhyKjpbmwiouxHRXF9d614IKzOK4uvo&usqp=CAE",
-            "nama": "Milkshake Vanilla",
-            "size": "Medium",
-            "harga": "20.000",
-            "link": "https://www.google.com/search?q=milkshake&source=lmns&tbm=shop&bih=636&biw=705&hl=id&sa=X&ved=2ahUKEwjG4LSdsZiBAxVX3DgGHbFeCz4Q0pQJKAJ6BAgBEAY#spd=3317988779654172408"
         },
         {
             "foto": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRdL4riyTRRjT7F_GIMoByO8BWNwzbL5vsCmpNDs3CvsFKq-zVJH4ZG5st7XpFkpKFDy-2H1x3ml1HYh83d8ABFNBDCSjZPsw&usqp=CAE",

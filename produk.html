@@ -11,20 +11,47 @@
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css">
     <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery.mycart.js"></script>
     <style>
         /* tulis kode CSS internal di bawah sini */
+        body {
+          background-image: url(images/background/bgkopi.png);
+          background-color: #0b5769;
+        }
+
+        nav {
+          background-color: #0b4e5fc7;
+          box-shadow: 0 3px 7px -2px #000;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          position: fixed;
+          z-index: 500;
+        }
+
+        .card {
+          transition: all 0.3s ease;
+        }
+
+        .card:hover {
+          overflow: hidden;
+          transform: scale(1.1);
+        }
 
         .bg-blackblue{
-            background-color: #0b4e5f;
+          background-color: #0b4e5fa8;
         }
 
         .btn-blackblue{
-            background-color: #12738b;
+          background-color: #084e5f;
         }
+
         .btn-blackblue:hover{
-            background-color: #0b4e5f;
+          background-color: #29a3c2;
         }
+
+        
 
         /* Batas Akhir penulisan kode CSS internal */
     </style>
@@ -33,7 +60,7 @@
 <body>
     <!-- Tulis Kode Bootstrap Di Bawah Sini -->
 
-    <nav class="navbar navbar-dark bg-blackblue navbar-expand-lg bisadicopy">
+    <nav class="navbar navbar-dark navbar-expand-lg bisadicopy">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="images/logo/logo_kuy.png" height="30" alt="image">
@@ -43,7 +70,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav11">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item active">
+              <li class="nav-item active font-Bauhaus">
                 <a class="nav-link" href="index.html#best-seller">Best Seller</a>
               </li>
               <li class="nav-item">
@@ -65,33 +92,80 @@
 
       <section class="riki-block produk text-center my-5 py-5">
         <div class="container">
-          <h1>Pilih Produk Anda</h1>
-          <p class="fs-4">Kualitas terbaik biji kopi pilihan, fresh langsung dari petani </p>
-          <hr class="border border-primary border-3 opacity-75">
-    
-          <!-- Ini Untuk Select -->
-          <div class="form-floating col-md-4 mx-auto">
-            <select class="form-select" id="select_kopi" aria-label="Floating label select example">
-              <option selected>-</option>
-              <option value="arabica">Arabica</option>
-              <option value="robusta">Robusta</option>
-              <option value="nonkopi">Non Kopi</option>
-            </select>
-            <label for="select_kopi">pilih Jenis Kopi</label>
+          <h1 class="text-white">Pilih Produk Anda</h1>
+          <p class="fs-4 text-white">Kualitas terbaik biji kopi pilihan, Fresh diambil langsung dari petani</p>
+          <hr class="border border-3 opacity-100 border-blackblue">
+
+          <div class="row mb-5 bg-filter">
+              <div class="col-md-12 col-lg-3 col-xl-4">
+                  <input type="search" id="cari" value="" class="form-control" placeholder="Cari Produk" />
+              </div>
+
+              <div class=" col-md-12 col-lg-3">
+                  <select class="form-select" id="kategori">
+                      <option value="semua" selected>Semua Kategori</option>
+                      <option value="arabica">Arabica</option>
+                      <option value="robusta">Robusta</option>
+                      <option value="milkshake">Milkshake</option>
+                      <option value="nonkopi">Non Coffee</option>
+                  </select>
+              </div>
+
+              <div class=" col-md-12 col-lg-3">
+                  <select class="form-select" id="filter_harga">
+                      <option selected disabled>Urutkan Berdasarkan</option>
+                      <option value="harga-terendah">Harga Terendah</option>
+                      <option value="harga-tertinggi">Harga Tertinggi</option>
+                  </select>
+
+              </div>
+
+              <div class="col">
+                <button type="button" class="mt-sm-2 mt-md-0 mx-auto btn btn-dark text-white" id="filter">
+                  Terapkan
+                </button>
+                <button class="mt-sm-2 mt-md-0 mx-auto btn btn-danger my-cart-icon"><i
+                  class=" bi bi-cart-check-fill"></i><span
+                  class="badge badge-notify my-cart-badge">0</span></button>
+
+              </div>
           </div>
-    
-          <div id="baris_produk" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 text-center mt-5 ">
-            
+
+          <div id="baris_produk" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-xxl-4">
+              <!--- akan terisi data dari JSON -->
           </div>
         </div>
       </section>
+
+      <div class="modal fade" id="my-cart-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"></button>
+                    <h4 class="modal-title" id="myModalLabel"><i class="bi bi-cart-check-fill"></i> My
+                        Cart</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover table-responsive" id="my-cart-table">
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                        onclick="$('#my-cart-modal').modal('hide');">Close</button>
+                    <button class="btn btn-primary my-cart-checkout">
+                        Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
       <footer class="riki-block footer-small py-4 bg-blackblue">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12 col-md-8">
               <ul class="nav justify-content-center justify-content-md-start">
-                <li class="nav-item active">
+                <li class="nav-item active font-monospace">
                     <a class="nav-link" href="index.html#best-seller">Best Seller</a>
                   </li>
                   <li class="nav-item">
@@ -118,49 +192,145 @@
     <script>
         /* Tulis Javascript Di bawah Sini */
 
-        var sumber = "https://rikikurnia.com/prakerja/api/kopi"
-        var sumber2 = "data.json"
-        var data_kopi = []
-        var data_pilihan = []
+        var sumber2 = "data.json";
+        GetData(null, "", null)
 
-        $.getJSON(sumber2).then(function(data){
-          data_kopi = data
-          console.log(data_kopi)
-        })
-
-        select_kopi.onchange = function () {
-          let pilihan = select_kopi.value
-          console.log(pilihan)
-          data_pilihan = data_kopi[pilihan]
-          console.log(data_pilihan)
-          updateTampilan()
+        filter.onclick = function () {
+          var search = cari.value
+          var kat = kategori.value
+          var sort = filter_harga.value
+          GetData(kat, search, sort)
         }
 
-        function updateTampilan() {
-            baris_produk.innerHTML = ""
-            data_pilihan.forEach(item => { 
-                baris_produk.innerHTML += `<div class="col mb-4">
-              <div class="card border-0">
+        function GetData(kat, search, sort) {
+          $.getJSON(sumber2).then(function (data) {
+
+            // Filter Kategori
+            switch (kat) {
+              case "arabica":
+                Data = data.arabica
+                break
+              case "robusta":
+                Data = data.arabica
+                break
+              case "milkshake":
+                Data = data.milkshake
+                break
+              case "nonkopi":
+                Data = data.nonkopi
+                break
+              default:
+                Data = [...data.arabica, ...data.robusta, ...data.milkshake, ...data.nonkopi]
+                break
+            }
+
+            //Filter Urutan Harga
+            switch (sort) {
+              case "harga-terendah":
+                Data.sort((a, b) => a.harga - b.harga)
+                break
+              case "harga-tertinggi":
+                Data.sort((a, b) => b.harga - a.harga)
+                break
+            }
+
+            //Filter Search
+            if (search !== "") {
+              search = search.toUpperCase();
+              Data = Data.filter(aray => aray.nama.toUpperCase().includes(search));
+            }
+            showData(Data)
+          })
+        }
+
+        function showData(data_kopi) {
+          baris_produk.innerHTML = "";
+
+          data_kopi.forEach(item => {
+            baris_produk.innerHTML += 
+            `<div class="col mb-4">
+              <div class="card bg-transparent border-0">
                 <img src="${item.foto}" class="img-fluid rounded-circle shadow rounded" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">${item.nama}</h5>
+                  <h5 class="card-title text-white">${item.nama}</h5>
                   <div class="row hargasize my-4">
-                    <div class="col">
+                    <div class="col text-white">
                       ${item.size}
                     </div>
-                    <div class="col fw-bold text-primary">
-                      ${item.harga}
+                    <div class="col fw-bold text-white">
+                      Rp. ${item.harga},-
                     </div>
                   </div>
-                  <a href="${item.link}" class="btn btn-blackblue text-light w-100">Beli <i class="bi bi-cart4"></i> </a>
+                  <div>
+                    <button data-id="${item.id}" data-summary="" data-image="${item.foto}" data-name="${item.nama}" data-quantity="1" data-price="${item.harga}"
+                                        class="btn text-white w-100 btn-dark my-cart-btn"><i class="bi bi-cart"></i> Add To Cart</button>
+                  </div>
                 </div>
               </div>
             </div>`
-                
-            })
+          })
+
+          if (baris_produk.innerHTML.length < 1) {
+            baris_produk.innerHTML +=
+            `<h6 class="fs-5 w-100">Produk tidak ditemukan</h6>`
+          }
         }
+        
         /* Batas Akhir penulisan kode Javascript */
     </script>
-</body>
 
+<script type="text/javascript">
+
+  // Sript Comot dari Github Orang
+
+  $(function () {
+
+      var goToCartIcon = function ($addTocartBtn) {
+          var $cartIcon = $(".my-cart-icon");
+          var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+          $addTocartBtn.prepend($image);
+          var position = $cartIcon.position();
+          $image.animate({
+              top: position.top,
+              left: position.left
+          }, 500, "linear", function () {
+              $image.remove();
+          });
+      }
+
+      $('.my-cart-btn').myCart({
+          currencySymbol: 'Rp. ',
+          classCartIcon: 'my-cart-icon',
+          classCartBadge: 'my-cart-badge',
+          classProductQuantity: 'my-product-quantity',
+          classProductRemove: 'my-product-remove',
+          classCheckoutCart: 'my-cart-checkout',
+          affixCartIcon: true,
+          showCheckoutModal: true,
+          numberOfDecimals: 3,
+          cartItems: [],
+          clickOnAddToCart: function ($addTocart) {
+              goToCartIcon($addTocart);
+          },
+          afterAddOnCart: function (products, totalPrice, totalQuantity) {
+              //console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+          },
+          clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+              //console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+          },
+          checkoutCart: function (products, totalPrice, totalQuantity) {
+              var checkoutString = "Total Price: " + totalPrice + ".000 \nTotal Quantity: " + totalQuantity;
+              checkoutString += "\n\n id \t name \t price \t quantity";
+              $.each(products, function () {
+                  checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.price + " \t " + this.quantity);
+              });
+
+              //console.log(checkoutString);
+              window.open("https://wa.me/6282221924292?text=" + encodeURI(checkoutString));
+          }
+      });
+
+  });
+</script>
+  </body>
 </html>
